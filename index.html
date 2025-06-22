@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+    </div>
+
+    <div class="game-container">
+        <h1>🎮 Tic-Tac-Toe 🎮</h1>
+        
+        <div class="game-modes">
+            <button class="mode-btn active" onclick="setGameMode('pvp')">
+                👥 Player vs Player
+            </button>
+            <button class="mode-btn" onclick="setGameMode('ai')">
+                🤖 Player vs AI
+            </button>
+        </div>
+
+        <div class="game-status" id="gameStatus">🔥 Player X's Turn</div>
+
+        <div class="game-board" id="gameBoard">
+            <button class="cell" onclick="makeMove(0)"></button>
+            <button class="cell" onclick="makeMove(1)"></button>
+            <button class="cell" onclick="makeMove(2)"></button>
+            <button class="cell" onclick="makeMove(3)"></button>
+            <button class="cell" onclick="makeMove(4)"></button>
+            <button class="cell" onclick="makeMove(5)"></button>
+            <button class="cell" onclick="makeMove(6)"></button>
+            <button class="cell" onclick="makeMove(7)"></button>
+            <button class="cell" onclick="makeMove(8)"></button>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="resetGame()">🔄 New Game</button>
+            <button class="btn btn-secondary" onclick="resetScore()">📊 Reset Score</button>
+        </div>
+
+        <div class="score-board">
+            <div class="score score-x">
+                <div class="score-icon">❌</div>
+                <div class="score-label">Player X</div>
+                <div class="score-value" id="scoreX">0</div>
+            </div>
+            <div class="score score-draw">
+                <div class="score-icon">🤝</div>
+                <div class="score-label">Draws</div>
+                <div class="score-value" id="scoreDraw">0</div>
+            </div>
+            <div class="score score-o">
+                <div class="score-icon">⭕</div>
+                <div class="score-label" id="playerOLabel">Player O</div>
+                <div class="score-value" id="scoreO">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
